@@ -1,11 +1,12 @@
 var express = require("express")
 var app = express()
-var port = process.env.port || 8080
+var port = process.env.port || 3000
 const mongoose = require('mongoose');
-const controller=require('../controller/controller')
-const router=express.Router()
+var controller=require('../controller/controller')
+var router=express.Router()
 
 router.get('/home', async (req, res) => {
+    console.log('routes')
     
     controller.content(req,res)
 
